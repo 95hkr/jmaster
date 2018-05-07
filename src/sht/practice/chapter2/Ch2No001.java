@@ -1,4 +1,4 @@
-package sht.practice.chapter1;
+package sht.practice.chapter2;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class No004
+ * Servlet implementation class Ch2No001
  */
-@WebServlet("/No004")
-public class No004 extends HttpServlet {
+@WebServlet("/Ch2No001")
+public class Ch2No001 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public No004() {
+    public Ch2No001() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,14 +32,10 @@ public class No004 extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = response.getWriter();
 
-		String al1 = request.getParameter("word");
 
-
-		al1.toUpperCase();
-
-		out.println("<html><head><title>No004</title></head><body>");
-		out.println(al1.toUpperCase());
+		out.println("<htmml><head><title>Ch2No001</title></head><body>");
+		out.println();
 		out.println("</body></html>");
 	}
-}
 
+}

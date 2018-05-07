@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class No004
+ * Servlet implementation class No005
  */
-@WebServlet("/No004")
-public class No004 extends HttpServlet {
+@WebServlet("/No005")
+public class No005 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public No004() {
+    public No005() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,14 +32,17 @@ public class No004 extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = response.getWriter();
 
-		String al1 = request.getParameter("word");
-
-
-		al1.toUpperCase();
-
-		out.println("<html><head><title>No004</title></head><body>");
-		out.println(al1.toUpperCase());
+		out.println("<html><head><title>No005</title></head><body>");
+		out.println("Hello World");
 		out.println("</body></html>");
 	}
-}
 
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

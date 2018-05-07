@@ -59,7 +59,7 @@ public class PlusServlet extends HttpServlet {
 		request.setAttribute("plus", bean);
 
 		// リクエストをAnswerServletに転送する
-		RequestDispatcher rd = request.getRequestDispatcher("/AnswerServlet");
+		RequestDispatcher rd = request.getRequestDispatcher("/answer.jsp");
 		rd.forward(request, response);
 
 //		// 答えの出力
