@@ -22,7 +22,6 @@ public class AppDao {
 	ResultSet rs = null;
 
 	try {
-
 		String sql = "SELECT * FROM user";
 		st = con.prepareStatement(sql);
 		rs = st.executeQuery();
@@ -46,7 +45,7 @@ public class AppDao {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new DAOException("");
+			throw new DAOException("データの取得に失敗しました。");
 
 		}
 	}
@@ -87,7 +86,7 @@ public class AppDao {
 			con = DriverManager.getConnection(url,user,pass);
 
 		} catch (Exception e) {
-			throw new DAOException("データの取得に失敗しました。");
+			throw new DAOException("データベースへの接続に失敗しました。");
 		}
 	}
 }

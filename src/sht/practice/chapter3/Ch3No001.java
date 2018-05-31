@@ -40,21 +40,21 @@ public class Ch3No001 extends HttpServlet {
 			for(String fluit:values) {
 				switch(fluit) {
 				case "str":
-					selectedFluit += "いちご" + "*";
+					selectedFluit += "いちご";
 					break;
 				case "lem":
-					selectedFluit += "れもん" + "*";
+					selectedFluit += "れもん";
 					break;
 				case "gra":
-					selectedFluit += "ぶどう" + "*";
+					selectedFluit += "ぶどう";
 					break;
 				case "pea":
-					selectedFluit += "もも" + "*";
+					selectedFluit += "もも";
 					break;
 				case "che":
-					selectedFluit += "さくらんぼ" + "*";
+					selectedFluit += "さくらんぼ";
 				default:
-					selectedFluit += "?" + "*";
+					selectedFluit += "?";
 					break;
 				}
 			}
@@ -64,7 +64,7 @@ public class Ch3No001 extends HttpServlet {
 		PrintWriter out = response.getWriter();
 
 		out.println("<html><head><title>Ch3No001</title></head><body>");
-		out.println(selectedFluit);
+		out.println(selectedFluit + "*");
 		out.println("</body></html>");
 	}
 }
